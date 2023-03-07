@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+    <!--Meta informazioni contenenti il titolo della pagina, codifica caratteri, importazione foglio
+        di stile, tag, descrizione e autore.-->
+    <head>
+        <title>Il Blog del Baffo - Notizie</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="keywords" content="HTML, CSS, BLOG, FPW"> 
+        <meta name="description" content="Blog di news e attualità">
+        <meta name="author" content="Nicola Porceddu">
+    </head>
+    
+    <body>
+        <!--Sezione che contiene logo del blog e sottomenù di navigazione.-->
+        <header> 
+            <div id="sezLogo">
+                <img class="flexImg" title="Logo" alt="Logo del Blog del Baffo" src="logo.png">
+                
+                <div class="sezLinkCorrente" id="sezLink2">
+                    Notizie
+                </div>
+                
+                <a href="login.html">
+                    <div class="sezLink" id="sezLink1">
+                        Login
+                    </div></a>
+            </div>
+        </header>
+
+        <!--Sezione contenente una barra di ricerca, una lista puntata contenente le categorie
+            degli articoli, una lista puntata contenente gli autori del blog. Le liste diventano
+            non visibili sotto gli 800px, diventando dei link.-->
+        <aside>
+            <form method="post">
+                <label for="ricerca">Cerca</label>
+                <input name="ricerca" id="ricerca" type="text"/>
+            </form>
+            <a href="#" class="show"><h3>Categorie</h3></a>
+            <h3 class="hidden">Categorie</h3>
+            <ul class="hidden">
+                <li><a href="#">Politica</a></li>
+                <li><a href="#">Cronaca</a></li>
+                <li><a href="#">Esteri</a></li>
+                <li><a href="#">Economia</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Cultura</a></li>
+            </ul>
+            
+            <a href="#" class="show"><h3>Autori</h3></a>
+            <h3 class="hidden">Autori</h3>
+            <ul class="hidden" id="listAutori">
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Nicola Porceddu</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Federico Piredda</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarF.png" width="25" height="25">Francesca Bacci</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarF.png" width="25" height="25">Giorgia Masala</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Lorenzo Carta</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Mauro Stochino</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarF.png" width="25" height="25">Serena Sanna</a></li>                           
+            </ul>
+        </aside>
+
+        <!--Sezione centrale della pagina. Contiene una notizia del blog: titolo, immagine, didascalia,
+            categoria, data, autore e articolo.-->
+        <main id="articolo">
+            <h1 class="corsivo">
+                "Non capiscono la differenza tra spingere e tirare", un diplomato su due non entra all’Università
+            </h1>
+
+            <h4>Articolo di <a href="#categorieNotizia">Cultura</a> 19/03/2018 di Nicola Porceddu</h4>
+
+            <img class="imgArticolo" title="Ragazzo che tira una porta con su scritto spingere" alt="Immagine articolo" src="Spingere_Uni.png" width="600" height="337">
+            <h5>Ragazzo che tira una porta con su scritto spingere</h5>
+
+            <p>
+                Dellavi (TA) – Una giornata davvero travagliata per i circa duecento studenti freschi dell’esame di maturità
+                che, stamattina, si sono trovati ad affrontare il test di ingresso per accedere all’Università di Dellavi. 
+                Le prime difficoltà si erano già manifestate qualche giorno prima, quando le nuove promesse della società
+                avevano avuto a che fare -per la prima volta in totale autonomia- con le macchinose trappole della burocrazia italiana.
+                "<em>Cioè, che vuol dire che per iscrivermi non è sufficiente un account Google?</em> – racconta un incredulo Bengieféde – 
+                <em>E veramente l’Università ha un sito tutto suo al posto di una pagina Facebook?</em>".
+                <br/><br/>
+                Il nutrito gruppo di candidati si è radunato stamattina davanti all’ingresso dell’Aula Magna dell’<b>Università di Dellavi</b>
+                e, subito dopo aver catturato il <b>pokémon Blissey</b> (molto raro), si sono trovati di fronte ad una porta a vetri. Chiusa.
+                <br/><br/>
+                I battenti erano sormontati da un grosso cartello che riportava la scritta "Test di ingresso. Apertura alle 9:00", mentre
+                nella parte centrale c’era un secondo cartello, grigiastro, che recava una sola parola: "Spingere".
+                <br/><br/>
+                Nient’altro.
+                <br/><br/>
+                I giovani candidati, abituati ad affrontare gli strani quesiti loro somministrati durante la famigerata “seconda prova”,
+                non si sono lasciati cogliere di sorpresa. Tutto sommato, per essere un test di accesso all’Università, sembrava alla loro
+                portata. I più fiduciosi ritenevano che per entrare fosse sufficiente attendere che il grande portone si aprisse da solo 
+                "alle 9:00", come scritto nel cartello. I più scafati, d’altra parte, evidenziavano che se nella porta era presente un indizio
+                ("<strong>Spingere</strong>") qualcosa avrebbe anche dovuto significare.
+                <br/><br/>
+                Alle 9:01 la porta a vetri era ancora completamente immobile davanti agli sbigottiti candidati. A quel punto, era necessario
+                risolvere l’enigma che si celava dietro la parola "Spingere".
+                <br/><br/>
+                "<em>Ricordo che ha a che fare con l’esercizio di una forza</em> – improvvisa Eusebio, brillante diplomato allo
+                scientifico-tecnologico-industrial-social-media – <em>ma non ricordo se si tratta di una forza da esercitare in direzione della
+                porta o in direzione opposta. O meglio, meglio: la direzione è sempre quella… perpendicolare alla porta… ma il verso, da che
+                verso va?</em>". Gianfilippa, aspirante ingegnera gestionale prova il tutto per tutto: "<em>La normativa sulla sicurezza prevede che
+                le porte di ingresso si debbano aprire verso l’uscita, quindi spingere significa che deve essere esercitata una forza verso
+                lo spingitore medesimo</em>". Il primo tentativo del futuro scienziato motorio Uomorummo, però, non va a buon fine. La porta resta
+                immobile nella sua posizione.
+                <br/><br/>
+                "<em>Forse non è stata applicata abbastanza forza</em> – tenta ancora Eusebio – <em>qualcuno ha calcolato la massa del battente?</em>"
+                Uomorummo, noto alle cronache per non accettare questo tipo di provocazioni, si lancia in un secondo tentativo che, però, conduce
+                solo allo sradicamento del maniglione antipanico, mentre il resto della porta rimane ancora lì, del tutto inamovibile, nonostante
+                la forza inarrestabile di Uomorummo. I più arguti si chiedono se la porta possa essere sfondata da una bici con le ruote quadrate,
+                ma nessuno li prende sul serio.
+                <br/><br/>
+                Nel frattempo, un candidato sopraggiunto in ritardo, si insinua nella calca e, sorpassando tutti i colleghi, riesce inspiegabilmente
+                ad entrare. Il come, però, resta un mistero per gli astanti, nel frattempo impegnati – i più – a cercare un tutorial su youtube e
+                – i meno – a catturare un secondo Blissey.
+                <br/><br/>
+                Alle ore 10:30, solo circa metà dei ragazzi era riuscita a varcare la soglia dell’Aula. I presenti, pur riportando voti mediocri
+                nel test di ingresso, sono stati tutti ammessi: "<em>Avevamo 120 posti per 200 candidati, ma solo 97 si sono presentati</em> –
+                racconta il rettore dell’Università di Dellavi – <em>quattro sono entrati dalla porta principale, novanta hanno aggirato il problema
+                entrando da dietro, infine, tre pensatori laterali si sono calati dal condotto dell’aria condizionata</em>".
+                <br/><br/>
+            </p>
+        </main>
+
+        <!--Sezione di chiusura della pagina. Contiene il logo dell'università e il nome del creatore del
+            blog.-->
+        <footer>
+            <img title="LogoUnica" alt="Logo di Unica" src="logoUnica.png" height="35" width="35" id="footer1">
+            <h5 id="footer2">UNICA - Università degli Studi di Cagliari</h5>           
+            <h5 id="footer3">Created by Nicola Porceddu</h5>        
+        </footer>
+    </body>
+</html>

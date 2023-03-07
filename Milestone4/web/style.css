@@ -1,0 +1,565 @@
+/* 
+    Created on : 15-mar-2018, 8.50.55
+    Author     : Nicola Porceddu
+*/
+
+/*Impostazione base del CSS: sfondo bianco e font "Palatino Linotype".*/
+body{
+    margin: 0px;
+    background-color: white;
+    font-family: "Palatino Linotype";
+}
+
+/*Impostazione base dell'header. Larghezza massima, altezza di 85px, colore di sfondo e bordo inferiore.*/
+header{
+    width: 100%;
+    height: 85px;
+    background-color: #F5DEB3;
+    border-bottom: 5px solid #410012;
+    padding-right: 0px;
+    box-sizing: border-box;
+}
+
+/*Impostazione base del sottomenù di navigazione.*/
+header div div{
+    padding-top: 7px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 0px;
+}
+
+/*Colore sfondo base del sottomenù di navigazione.*/
+.sezLink{
+    background-color: #BA6262;
+}
+
+/*Cambio colore sfondo al passaggio del cursore sopra il sottomenù di navigazione.*/
+.link:hover{
+    background-color: #410012;
+}
+
+/*Colore più scuro per il sottomenù che si sta visitando.*/
+.sezLinkCorrente{
+    background-color: #410012;
+}
+
+/*Regolazione posizione del primo sottomenù partendo da destra.*/
+#sezLink1{
+    right: 10%;
+}
+
+/*Regolazione posizione del secondo sottomenù partendo da destra.*/
+#sezLink2{
+    right: 30%;
+}
+
+/*Regolazione posizione del terzo sottomenù partendo da destra.*/
+#sezLink3{
+    right: 50%;
+}
+
+/*Regolazione posizione del quarto sottomenù partendo da destra.*/
+#sezLink4{
+    right: 66%;
+}
+
+/*Scelta stile del pulsante di Logout presente all'interno del sottomenù di navigazione*/
+#logoutButton{
+    font-family: "Monotype Corsiva";
+    font-size: 0.9em;
+    background-color: #410012;
+    color: white;
+}
+
+/*Impostazione base della sezione di ricerca.*/
+aside{
+    box-sizing: border-box;
+    background-color: #F5DEB3;
+    color: #560319;
+}
+
+/*Posizionamento delle icone degli autori.*/
+aside li img{
+    vertical-align: middle;
+}
+
+/*Cambio colore sfondo al passaggio del cursore sopra i link della sezione di navigazione.*/
+aside a:hover{
+    background-color: #EFEFEF;
+}
+
+/*Cambio stile dei link all'interno della pagina.*/
+a, #articolo h4 a{
+    text-decoration: none;
+    font-family: "Palatino Linotype";
+    color: #410012;
+}
+
+/*Impostazione stile della barra di ricerca.*/
+#ricerca{
+    background-color: #EFEFEF;
+    font-family: "Times New Roman";
+    padding-left: 10px;
+}
+
+/*Spaziatura dei campi di input.*/
+.primo::after, .successivi::after{
+    content: '\A';
+    white-space: pre;
+}
+
+/*Spaziatura dei campi di input.*/
+.successivi::before{
+    content: '\A\A';
+    white-space: pre;
+}
+
+/*Impostazione base della sezione centrale della pagina.*/
+main{
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    vertical-align: 50%;
+    text-align: center;
+}
+
+/*Cambio stile per la pagina centrale di login.*/
+#sezLogin{
+    color: #410012;
+    padding-top: 3%;
+}
+
+/*Posizionamento logo all'interno della pagina di login.*/
+.logo{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Impostazione stile della sezione di form di login.*/
+#login{
+    box-sizing: border-box;
+    background-color: #F5DEB3;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    vertical-align: 50%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid #410012;
+}
+
+/*Impostazione stile degli input di login.*/
+#sezLogin input{
+    text-align: center;
+    font-family: "Times New Roman";
+    width: 50%;
+}
+
+/*Impostazione cambio stile sezioni di input durante inserimento dati.*/
+input:focus{
+    outline: none !important;
+    border: 1px solid #410012;
+    box-shadow: 0 0 10px #410012;
+}
+
+/*Dimensione font messaggio di errato login.*/
+.errore{
+    font-size: 0.6em;
+}
+
+/*Impostazione stile del pulsante di login.*/
+#loginButton{
+    font-family: "Monotype Corsiva";
+    font-size: 0.9em;
+    background-color: #410012;
+    color: white;
+}
+
+/*Impostazione base della sezione centrale relativa ad un articolo.*/
+#articolo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: "Times New Roman";
+}
+
+/*Cambio di font.*/
+.corsivo{
+    font-family: "Monotype Corsiva";
+}
+
+/*Posizionamento dell'immagine dell'articolo.*/
+.imgArticolo{
+    display: block;
+    margin: 0 auto;
+}
+
+/*Posizionamento sezioni interne all'anteprima.*/
+.anteprima{
+    display: flex;
+    align-items: center;
+}
+
+/*Dimensione dell'immagine di anteprima.*/
+.imgAnteprima{
+    width: 80%;
+    height: 80%;
+}
+
+/*Impostazione padding anteprima articolo.*/
+.anteprima div{
+    padding-left: 10px;
+}
+
+/*Allineamento testo a sinistra*/
+.left{
+    text-align: left;
+}
+
+/*Impostazione base della sezione centrale contenente gli articoli scritti da un autore.*/
+#profilo{
+    padding-top: 30px;
+    height: 100%;
+}
+
+/*Impostazione della tabella degli articoli scritti da un autore.*/
+#profilo table{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+/*Cambio stile della prima riga della tabella.*/
+#primaRiga{
+    background-color: #410012;
+    color: white;
+}
+
+/*Cambio stile delle righe pari della tabella.*/
+tr:nth-child(even){
+    background-color: #BA6262;
+}
+
+/*Cambio stile delle righe dispari della tabella.*/
+tr:nth-child(odd){
+    background-color: #F5DEB3;
+}
+
+/*Impostazione stile del pulsante di nuovo articolo.*/
+#nuovoArticoloButton{
+    background-color: #410012;
+    color: white;
+    font-family: "Monotype Corsiva";
+    font-size: 1.2em;
+}
+
+/*Impostazione base della pagina centrale contenente il form di scrittura di un nuovo articolo.*/
+#inputPage{
+    padding-bottom: 50px;
+    color: #410012;
+}
+
+/*Impostazione grandezza delle etichette dei campi di input.*/
+#inputPage label, #inputPage .lbl{
+    font-size: 1.5em;
+}
+
+/*Impostazione grandezza della etichetta del campo di input.*/
+#inputPage h2{
+    font-size: 2em;
+}
+
+/*Impostazione grandezza campi checkbox.*/
+#inputPage .slim{
+    font-size: 0.7em;
+}
+
+/*Impostazione stile campi di scrittura del form.*/
+#inputPage .grey{
+    background-color: #EFEFEF;
+    text-align: center;
+    font-family: "Times New Roman";
+}
+
+/*Impostazione stile del pulsante di salvataggio di un articolo.*/
+#inputPage button{
+    font-family: "Monotype Corsiva";
+    font-size: 1.3em;
+    background-color: #410012;
+    color: white;
+}
+
+/*Impostazione base del footer.*/
+footer{
+    background-color: #410012;
+    height: 40px;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+}
+
+/*Posizionamento del primo elemento del footer.*/
+#footer1{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    margin: 0px;
+}
+
+/*Posizionamento del secondo elemento del footer.*/
+#footer2{
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+/*Posizionamento del terzo elemento del footer.*/
+#footer3{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    margin: 0px;
+}
+
+/*Impostazione per finestre di dimensione massima 799px.*/
+@media only screen and (max-width: 799px){
+    /*Riposizionamento header*/
+    header{
+        position: relative;
+    }
+
+    /*Ridimensionamento immagine logo.*/
+    .flexImg{
+        position: relative;
+        left: 5%;
+        width: 100px;
+        height: 50px;
+    }
+    
+    /*Reimpostazione della sezione di ricerca.*/
+    aside{
+        position: relative;
+        width: 100%;
+        height: 130px;
+        font-size: 0.8em;
+        text-align: center;
+        vertical-align: 50%;
+        padding-top: 12px;
+        border-bottom: 5px solid #410012;
+    }
+    
+    /*Dimensione caratteri sottomenù.*/
+    header div div{
+        font-size: 0.8em;
+    }
+    
+    /*Regolazione posizione del primo sottomenù partendo da destra.*/
+    #sezLink1{
+        right: 5%;
+    }
+
+    /*Regolazione posizione del secondo sottomenù partendo da destra.*/
+    #sezLink2{
+        right: 35%;
+    }
+
+    /*Regolazione posizione del terzo sottomenù partendo da destra.*/
+    #sezLink3{
+        right: 55%;
+    }
+    
+    /*Regolazione posizione del quarto sottomenù partendo da destra.*/
+    #sezLink4{
+        right: 75%;
+    }
+    
+    /*Oscuramento delle sezioni contrassegnate dalla classe.*/
+    .hidden{
+        display: none;
+    }
+    
+    /*Dimensione barra di ricerca.*/
+    #ricerca{
+        width: 50%;
+    }
+    
+    /*Spaziatura dei campi della sezione di ricerca.*/
+    #categorie::after, #categorie::before, #autori::before{
+        content: '\A';
+        white-space: pre;
+    }
+    
+    /*Ridimensionamento dei caratteri dei link della sezione di ricerca*/
+    #autori, #categorie{
+        font-size: 1.2em;
+    }
+    
+    /*Reimpostazione pagina centrale di login.*/
+    #sezLogin{
+        padding-top: 10%;
+        font-size: 1em;
+    }
+    
+    /*Ridimensionamento logo all'interno della pagina di login.*/
+    .logo{
+        width: 150px;
+        height: 131px;
+    }
+    
+    /*Ridimensionamento della sezione di form di login.*/
+    #login{
+        width: 50%;
+    }
+    
+    /*Ridimensionamento dell'immagine dell'anteprima notizia.'*/
+    .imgAnteprima{
+     /*   display: block;*/
+    }
+    
+    /*Reimpostazione della sezione centrale relativa ad un articolo.*/
+    #articolo{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 0.9em;
+    }
+    
+    /*Ridimensionamento dell'immagine dell'articolo.*/
+    .imgArticolo{
+        width: 70%;
+        min-width: 50%;
+        height: auto;
+    }
+    
+    /*Ridimensionamento campo di scrittura dell'articolo.*/
+    #inputPage textarea{
+        width: 70%;
+        height: 70%;
+    }
+    
+    /*Posizionamento footer.*/
+    footer{
+        position: relative;
+        font-size: 0.7em;
+    }
+}
+
+/*Impostazione per finestre di dimensione oltre gli 800px.*/
+@media only screen and (min-width: 800px){
+    /*Riposizionamento header*/
+    header{
+        position: fixed;
+        z-index: 1;
+    }
+    
+    /*Ridimensionamento immagine logo.*/
+    .flexImg{
+        position: relative;
+        left: 5%;
+        width: 160px;
+        height: 80px;
+    }
+    
+    /*Posizionamento della sezione centrale della pagina.*/
+    main{
+        top: 85px;
+        bottom: 40px;
+        width: 80%;
+        float: right;
+        z-index: -1;
+    }
+    
+    /*Dimensione barra di ricerca.*/
+    #ricerca{
+        width: 60%;
+    }
+
+    /*Oscuramento delle sezioni contrassegnate dalla classe.*/
+    .show{
+        display: none;
+    }
+
+    /*Dimensione caratteri sottomenù.*/
+    header div div{
+        font-size: 1.2em;
+    }
+
+    /*Reimpostazione della sezione di ricerca.*/
+    aside{
+        position: fixed;
+        top: 85px;
+        bottom: 40px;
+        width: 20%;
+        float: left;
+        font-size: 0.9em;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-content: center;
+        border-right: 5px solid #410012;
+        overflow: auto;
+    }
+    
+    /*Impostazione elenco puntato degli autori.*/
+    #listAutori{
+        list-style-type: none;
+        padding-left: 20px;
+    }
+    
+    /*Posizionamento icona avatar degli autori.*/
+    #listAutori img{
+        padding-right: 10px;
+    }
+ 
+    /*Ridimensionamento della sezione di form di login.*/
+    #login{
+        width: 30%;
+    }
+    
+    /*Ridimensionamento caratteri della pagina centrale di login.*/
+    #sezLogin{
+        font-size: 1.1em;
+    }
+
+    /*Ridimensionamento logo all'interno della pagina di login.*/
+    .logo{
+        width: 250px;
+        height: 218px;
+    }
+    
+    /*Larghezza titolo e didascalia dell'articolo*/
+    #titolo, #didascalia{
+        width: 30%;
+    }
+    
+    /*Ridimensionamento dell'immagine dell'articolo.*/
+    .imgArticolo{
+        width: 70%;
+        height: auto;
+    }
+    
+    /*Reimpostazione della sezione centrale relativa ad un articolo.*/
+    #articolo{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    
+    /*Ridimensionamento caratteri dell'articolo.*/
+    #articolo p{
+        font-size: 1.1em;
+    }
+    
+    /*Posizionamento footer.*/
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+}

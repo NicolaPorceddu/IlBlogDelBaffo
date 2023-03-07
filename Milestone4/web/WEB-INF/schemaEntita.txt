@@ -1,0 +1,34 @@
+Entità User
+#	*id
+	nome
+	cognome
+	username
+	email
+	password
+	urlProfImg
+	tipo
+	sesso
+	giorno
+	mese
+	anno
+
+Entità News
+#	*id
+	titolo
+	contenuto
+	img
+	didascalia
+	categorie
+	data
+	autore
+
+Ogni news può e deve avere un solo autore. Un singolo autore può scrivere più news.
+
+Entità Comment
+#	*id
+	commento
+	autore
+	idNotizia
+
+Ogni commento può e deve avere un solo autore. Un singolo autore può scrivere più commenti.
+Ogni commento può e deve essere collegato ad una sola news. Ogni news può avere più commenti.

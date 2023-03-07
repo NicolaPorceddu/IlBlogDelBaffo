@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+    <!--Meta informazioni contenenti il titolo della pagina, codifica caratteri, importazione foglio
+        di stile, tag, descrizione e autore.-->
+    <head>
+        <title>Il Blog del Baffo - Nuovo articolo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="keywords" content="HTML, CSS, BLOG, FPW"> 
+        <meta name="description" content="Blog di news e attualità">
+        <meta name="author" content="Nicola Porceddu">
+    </head>
+    
+    <body>
+        <!--Sezione che contiene logo del blog e sottomenù di navigazione.-->
+        <header>
+            <div id="sezLogo">
+                <img class="flexImg" title="Logo" alt="Logo del Blog del Baffo" src="logo.png">
+                
+                <a href="notizia.html">
+                    <div class="sezLink" id="sezLink4">
+                        Notizie
+                    </div></a>
+                <div class="sezLink" id="sezLink3">
+                    Profilo
+                </div>
+                
+                <div class="sezLinkCorrente" id="sezLink2">
+                    I miei <br class="show"/> articoli
+                </div>
+                
+                <div class="sezLink" id="sezLink1">
+                    Ciao, <br class="show"/> Nicola!
+                    <form action="login.html" method="get">
+                        <button type="submit" id="logoutButton">Logout</button>
+                    </form>
+                </div> 
+            </div>
+        </header>
+
+        <!--Sezione contenente una barra di ricerca, una lista puntata contenente le categorie
+            degli articoli, una lista puntata contenente gli autori del blog. Le liste diventano
+            non visibili sotto gli 800px, diventando dei link.-->
+        <aside>
+            <form method="post">
+                <label for="ricerca">Cerca</label>
+                <input name="ricerca" id="ricerca" type="text"/>
+            </form>
+            
+            <a href="#" class="show"><h3>Categorie</h3></a>
+            <h3 class="hidden">Categorie</h3>
+            <ul class="hidden">
+                <li><a href="#">Politica</a></li>
+                <li><a href="#">Cronaca</a></li>
+                <li><a href="#">Esteri</a></li>
+                <li><a href="#">Economia</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Cultura</a></li>
+            </ul>
+            
+            <a href="#" class="show"><h3>Autori</h3></a>
+            <h3 class="hidden">Autori</h3>
+            <ul class="hidden" id="listAutori">
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Nicola Porceddu</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Federico Piredda</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarF.png" width="25" height="25">Francesca Bacci</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarF.png" width="25" height="25">Giorgia Masala</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Lorenzo Carta</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarM.png" width="25" height="25">Mauro Stochino</a></li>
+                <li><a href="#"><img title="Avatar" alt="Immagine del profilo" src="avatarF.png" width="25" height="25">Serena Sanna</a></li>                           
+            </ul>
+        </aside>
+
+        <!--Sezione centrale della pagina. Contiene un form per la scrittura/modifica di un articolo.
+            Vi è un input per il titolo, per la data, per l'immagine, per la didascalia, per il corpo
+            del testo e per la selezione delle categorie di appartenenza.-->
+        <main id="scriviArticolo">
+            <h2 class="corsivo">Scrivi articolo</h2>
+
+            <form action="articoli.html" method="get">
+                <label for="titolo" class="primo">Titolo</label>
+                <input type="text" name="titolo" id="titolo" class="grey"/>
+                
+                <label for="data" class="successivi">Data</label>
+                <input type="date" name="data" id="data" class="grey">
+                
+                <label for="immagine" class="successivi">Immagine</label>
+                <input type="file" size="60" accept=".png, .jpg, .jpeg" name="immagine" id="immagine"/>
+                
+                <label for="didascalia" class="successivi">Didascalia</label>
+                <input type="text" name="didascalia" id="didascalia" class="grey"/>
+                
+                <label for="articolo" class="successivi">Testo dell'articolo</label>
+                <textarea rows="20" cols="80" name="articolo" id="articolo" class="grey"></textarea>
+                <br/><br/>
+                <p id="lbl">Categorie</p>
+                <p>
+                    <input type="checkbox" name="interessi" value="Politica">
+                    Politica
+                    <br/>
+                    <input type="checkbox" name="interessi" value="Cronaca">
+                    Cronaca
+                    <br/>
+                    <input type="checkbox" name="interessi" value="Esteri">
+                    Esteri
+                    <br/>
+                    <input type="checkbox" name="interessi" value="Economia">
+                    Economia
+                    <br/>
+                    <input type="checkbox" name="interessi" value="Sport">
+                    Sport
+                    <br/>
+                    <input type="checkbox" name="interessi" value="Cultura">
+                    Cultura
+                </p>
+                <br/>
+                <!--Pulsante per il salvataggio dell'articolo-->
+                <button type="submit">Salva</button>
+            </form>
+        </main>
+
+        <!--Sezione di chiusura della pagina. Contiene il logo dell'università e il nome del creatore del
+            blog.-->
+        <footer>
+            <img title="LogoUnica" alt="Logo di Unica" src="logoUnica.png" height="35" width="35" id="footer1">
+            <h5 id="footer2">UNICA - Università degli Studi di Cagliari</h5>   
+            <h5 id="footer3">Created by Nicola Porceddu</h5>        
+        </footer>
+    </body>
+</html>
